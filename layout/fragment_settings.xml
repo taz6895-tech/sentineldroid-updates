@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="⚙️ Settings" android:textSize="22sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="4dp"/>
+        <TextView android:id="@+id/tv_settings_version" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="SentinelDroid v1.0"
+            android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="20dp"/>
+
+        <!-- HIBP API Key section -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🔓 Data Breach API Key" android:textSize="16sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Required for full breach checking. Get a free key at haveibeenpwned.com (costs ~$3.50/year for personal use, or free with trial)."
+            android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="10dp"/>
+        <TextView android:id="@+id/tv_hibp_key_status" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Checking..."
+            android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp"/>
+        <EditText android:id="@+id/et_hibp_key" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Paste your HIBP API key here"
+            android:inputType="textPassword" android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary" android:background="@color/surface"
+            android:padding="12dp" android:layout_marginBottom="8dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="20dp">
+            <Button android:id="@+id/btn_save_hibp_key" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="Save Key" android:backgroundTint="@color/primary"
+                android:textColor="@android:color/white" android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btn_get_hibp_key" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="Get Free Key ↗" android:backgroundTint="@color/surface"
+                android:textColor="@color/primary"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/divider" android:layout_marginBottom="20dp"/>
+
+        <!-- Background Monitoring section -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🛡️ Always-On Protection" android:textSize="16sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Keep SentinelDroid running in the background — even after you close the app or reboot the phone. Re-scans every 30 minutes and alerts you if a high-risk app appears."
+            android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="10dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+            <TextView android:id="@+id/tv_bg_status" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="Background monitoring: ON" android:textSize="14sp"
+                android:textColor="@color/text_primary"/>
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switch_background"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:checked="true"/>
+        </LinearLayout>
+        <Button android:id="@+id/btn_battery_optim" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Disable battery optimisation ↗"
+            android:backgroundTint="@color/surface" android:textColor="@color/primary"
+            android:layout_marginBottom="20dp"/>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/divider" android:layout_marginBottom="20dp"/>
+
+        <!-- Update URL section -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🔄 Update Check URL" android:textSize="16sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Set this to your GitHub raw version.json URL after following UPDATE_SETUP.md"
+            android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tv_url_status" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text=""
+            android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp"/>
+        <EditText android:id="@+id/et_update_url" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:inputType="textUri"
+            android:textColor="@color/text_primary" android:textColorHint="@color/text_secondary"
+            android:background="@color/surface" android:padding="12dp" android:layout_marginBottom="8dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="20dp">
+            <Button android:id="@+id/btn_save_update_url" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="Save URL" android:backgroundTint="@color/primary"
+                android:textColor="@android:color/white" android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btn_setup_guide" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="Setup Guide ↗" android:backgroundTint="@color/surface"
+                android:textColor="@color/primary"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/divider" android:layout_marginBottom="16dp"/>
+
+        <!-- Privacy notice -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🔒 Privacy" android:textSize="16sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="8dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="12sp" android:textColor="@color/text_secondary"
+            android:text="• All scanning is done entirely on your device\n• No personal data is sent to any server\n• Breach checks use k-anonymity (your email/password never leaves)\n• The update check only contacts GitHub (read-only)\n• Screenshots are blocked to protect sensitive data (FLAG_SECURE)"/>
+
+    </LinearLayout>
+</ScrollView>

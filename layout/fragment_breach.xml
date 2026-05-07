@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🔓 Data Breach Monitor" android:textSize="22sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Check if your email or passwords appear in known data breaches"
+            android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginBottom="16dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="📧 Email Breach Check" android:textSize="15sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="8dp"/>
+        <EditText android:id="@+id/et_email" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Enter your email address"
+            android:inputType="textEmailAddress" android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary" android:background="@color/surface"
+            android:padding="12dp" android:layout_marginBottom="8dp"/>
+        <Button android:id="@+id/btn_check_email" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Check for Breaches"
+            android:backgroundTint="@color/primary" android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tv_breach_status" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Enter email above"
+            android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp"/>
+        
+        <!-- API Key required banner -->
+        <LinearLayout
+            android:id="@+id/card_api_key_required"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1A2E4A"
+            android:padding="14dp"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔑 HIBP API Key Required for full breach lookup"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp"/>
+            <Button
+                android:id="@+id/btn_go_to_settings"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:text="Go to Settings → Add API Key"
+                android:textSize="12sp"
+                android:backgroundTint="@color/primary"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/ll_breach_results" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginBottom="24dp"/>
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/divider" android:layout_marginBottom="16dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🔑 Password Breach Check" android:textSize="15sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Your password is NEVER sent anywhere. We use k-anonymity: only the first 5 chars of a SHA-1 hash are checked."
+            android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp"/>
+        <EditText android:id="@+id/et_password" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Enter password to check"
+            android:inputType="textPassword" android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary" android:background="@color/surface"
+            android:padding="12dp" android:layout_marginBottom="6dp"/>
+        <CheckBox android:id="@+id/cb_show_password" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Show password"
+            android:textColor="@color/text_secondary" android:layout_marginBottom="8dp"/>
+        <Button android:id="@+id/btn_check_password" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Check Password Safety"
+            android:backgroundTint="@color/primary" android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tv_password_result" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Enter a password above to check"
+            android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginBottom="24dp"/>
+    </LinearLayout>
+</ScrollView>

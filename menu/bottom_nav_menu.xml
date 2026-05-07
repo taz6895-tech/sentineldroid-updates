@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/dashboardFragment" android:icon="@drawable/ic_nav_dashboard" android:title="Home"/>
+    <item android:id="@+id/appScanFragment"   android:icon="@drawable/ic_nav_scan"      android:title="Apps"/>
+    <item android:id="@+id/vulnScanFragment"  android:icon="@drawable/ic_nav_vuln"      android:title="Vulns"/>
+    <item android:id="@+id/virusScanFragment" android:icon="@drawable/ic_nav_virus"     android:title="Virus"/>
+    <item android:id="@+id/toolsHubFragment"  android:icon="@drawable/ic_nav_tools"     android:title="Tools"/>
+    <item android:id="@+id/settingsFragment"  android:icon="@drawable/ic_nav_settings"  android:title="Settings"/>
+</menu>

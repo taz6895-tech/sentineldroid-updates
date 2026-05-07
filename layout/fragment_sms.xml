@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+      android:orientation="vertical" android:padding="16dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="💬 SMS Phishing Scanner" android:textSize="22sp" android:textStyle="bold"
+        android:textColor="@color/text_primary" android:layout_marginBottom="4dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Scans your inbox for scam links, phishing keywords, and suspicious URLs"
+        android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp"/>
+    <Button android:id="@+id/btn_sms_scan" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="🔍 Scan SMS Inbox"
+        android:backgroundTint="@color/primary" android:textColor="@android:color/white"
+        android:layout_marginBottom="8dp"/>
+    <TextView android:id="@+id/tv_sms_status" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Tap to scan (requires SMS permission)"
+        android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="4dp"/>
+  </LinearLayout>
+  <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+    <LinearLayout android:id="@+id/ll_sms_results" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:paddingTop="0dp"/>
+  </ScrollView>
+</LinearLayout>

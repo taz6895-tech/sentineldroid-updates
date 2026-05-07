@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph" app:startDestination="@id/dashboardFragment">
+    <fragment android:id="@+id/dashboardFragment"    android:name="com.sentineldroid.ui.dashboard.DashboardFragment"       android:label="Home"/>
+    <fragment android:id="@+id/appScanFragment"      android:name="com.sentineldroid.ui.appscan.AppScanFragment"           android:label="App Scanner"/>
+    <fragment android:id="@+id/vulnScanFragment"     android:name="com.sentineldroid.ui.vulnscan.VulnScanFragment"         android:label="Vulnerabilities"/>
+    <fragment android:id="@+id/virusScanFragment"    android:name="com.sentineldroid.ui.virusscan.VirusScanFragment"       android:label="Virus Scan"/>
+    <fragment android:id="@+id/toolsHubFragment"     android:name="com.sentineldroid.ui.tools.ToolsHubFragment"           android:label="Tools"/>
+    <fragment android:id="@+id/settingsFragment"     android:name="com.sentineldroid.ui.settings.SettingsFragment"         android:label="Settings"/>
+    <fragment android:id="@+id/threatsFragment"      android:name="com.sentineldroid.ui.threats.ThreatsFragment"           android:label="Threats"/>
+    <fragment android:id="@+id/networkFragment"      android:name="com.sentineldroid.ui.network.NetworkFragment"           android:label="Network"/>
+    <fragment android:id="@+id/rootCheckFragment"    android:name="com.sentineldroid.ui.rootcheck.RootCheckFragment"       android:label="Device Integrity"/>
+    <fragment android:id="@+id/breachFragment"       android:name="com.sentineldroid.ui.breach.BreachFragment"             android:label="Breach Monitor"/>
+    <fragment android:id="@+id/phishingFragment"     android:name="com.sentineldroid.ui.phishing.PhishingFragment"         android:label="Link Checker"/>
+    <fragment android:id="@+id/privacyAuditFragment" android:name="com.sentineldroid.ui.privacyaudit.PrivacyAuditFragment" android:label="Privacy Audit"/>
+    <fragment android:id="@+id/micCameraFragment"    android:name="com.sentineldroid.ui.miccamera.MicCameraFragment"       android:label="Sensor Guard"/>
+    <fragment android:id="@+id/securityLogFragment"  android:name="com.sentineldroid.ui.log.SecurityLogFragment"           android:label="Security Log"/>
+    <fragment android:id="@+id/clipboardFragment"    android:name="com.sentineldroid.ui.clipboard.ClipboardFragment"       android:label="Clipboard Monitor"/>
+    <fragment android:id="@+id/dnsFragment"          android:name="com.sentineldroid.ui.dns.DnsFragment"                   android:label="DNS Leak Checker"/>
+    <fragment android:id="@+id/passwordFragment"     android:name="com.sentineldroid.ui.password.PasswordFragment"         android:label="Password Checker"/>
+    <fragment android:id="@+id/smsFragment"          android:name="com.sentineldroid.ui.sms.SmsFragment"                   android:label="SMS Scanner"/>
+    <fragment android:id="@+id/eraserFragment"       android:name="com.sentineldroid.ui.eraser.EraserFragment"             android:label="Secure Eraser"/>
+    <fragment android:id="@+id/wifiHistoryFragment"  android:name="com.sentineldroid.ui.wifihistory.WifiHistoryFragment"   android:label="WiFi History"/>
+</navigation>

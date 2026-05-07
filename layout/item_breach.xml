@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="12dp" android:layout_marginTop="8dp"
+    android:background="@color/surface">
+    <TextView android:id="@+id/tv_breach_name" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:textSize="15sp" android:textStyle="bold"
+        android:textColor="@color/threat_high"/>
+    <TextView android:id="@+id/tv_breach_domain" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:textSize="12sp" android:textColor="@color/text_secondary"/>
+    <TextView android:id="@+id/tv_breach_date" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:textSize="12sp" android:textColor="@color/text_secondary"/>
+    <TextView android:id="@+id/tv_breach_data" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:textSize="12sp" android:textColor="@color/threat_medium"
+        android:layout_marginTop="4dp"/>
+    <TextView android:id="@+id/tv_breach_desc" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:textSize="12sp" android:textColor="@color/text_secondary"
+        android:layout_marginTop="4dp"/>
+</LinearLayout>

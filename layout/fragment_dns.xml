@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+      android:orientation="vertical" android:padding="16dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="🌐 DNS Leak Checker" android:textSize="22sp" android:textStyle="bold"
+        android:textColor="@color/text_primary" android:layout_marginBottom="4dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Checks if your VPN is leaking DNS queries to your ISP"
+        android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginBottom="16dp"/>
+    <TextView android:id="@+id/tv_dns_result" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="—" android:textSize="28sp"
+        android:textStyle="bold" android:textColor="@color/text_primary" android:layout_marginBottom="6dp"/>
+    <TextView android:id="@+id/tv_dns_vpn" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="VPN: Unknown"
+        android:textSize="14sp" android:textColor="@color/text_secondary" android:layout_marginBottom="4dp"/>
+    <TextView android:id="@+id/tv_dns_ip" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Your IP: —"
+        android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp"/>
+    <TextView android:id="@+id/tv_dns_summary" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text=""
+        android:textSize="14sp" android:textColor="@color/text_primary" android:layout_marginBottom="12dp"/>
+    <Button android:id="@+id/btn_dns_check" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="🔍 Run DNS Leak Test"
+        android:backgroundTint="@color/primary" android:textColor="@android:color/white"
+        android:layout_marginBottom="8dp"/>
+    <TextView android:id="@+id/tv_dns_status" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Tap to test"
+        android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="12dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="DNS Servers Detected" android:textSize="14sp" android:textStyle="bold"
+        android:textColor="@color/text_primary" android:layout_marginBottom="6dp"/>
+    <LinearLayout android:id="@+id/ll_dns_servers" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:background="@color/surface" android:padding="10dp" android:layout_marginBottom="16dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Recommendations" android:textSize="14sp" android:textStyle="bold"
+        android:textColor="@color/text_primary" android:layout_marginBottom="6dp"/>
+    <LinearLayout android:id="@+id/ll_dns_recs" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:background="@color/surface" android:padding="10dp"/>
+  </LinearLayout>
+</ScrollView>

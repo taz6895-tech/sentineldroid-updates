@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="🛠️ Security Tools" android:textSize="22sp" android:textStyle="bold"
+        android:textColor="@color/text_primary" android:padding="16dp" android:paddingBottom="4dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="All protection tools in one place"
+        android:textSize="13sp" android:textColor="@color/text_secondary"
+        android:paddingHorizontal="16dp" android:paddingBottom="12dp"/>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:id="@+id/ll_tools_container"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+</LinearLayout>

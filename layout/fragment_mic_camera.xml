@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🎙️ Mic, Camera &amp; Location Guard" android:textSize="22sp"
+            android:textStyle="bold" android:textColor="@color/text_primary" android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Shows which apps recently accessed your microphone, camera, or location — and when"
+            android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp"/>
+        <Button android:id="@+id/btn_sensor_scan" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="🔍 Refresh Access History"
+            android:backgroundTint="@color/primary" android:textColor="@android:color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView android:id="@+id/tv_sensor_status" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Loading..."
+            android:textSize="12sp" android:textColor="@color/text_secondary"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:id="@+id/ll_sensor_container" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:paddingTop="0dp"/>
+    </ScrollView>
+</LinearLayout>

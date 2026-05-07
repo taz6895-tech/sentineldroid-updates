@@ -1,0 +1,9 @@
+{
+  "version": "1.5.0",
+  "version_code": 5,
+  "release_date": "2026-05-06",
+  "release_notes": "• Always-on background monitoring (re-scans every 30 min)\n• Auto-start on phone reboot\n• One-tap APK install via GitHub Releases\n• Battery-optimisation prompt to keep watcher alive\n• Settings toggle to disable background mode",
+  "download_url": "https://github.com/YOUR_USERNAME/sentineldroid-updates/releases/latest",
+  "minimum_supported_version_code": 1,
+  "force_update": false
+}

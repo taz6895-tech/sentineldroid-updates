@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🔗 Link Safety Checker" android:textSize="22sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Paste any suspicious URL to check for phishing, malware, and scam patterns"
+            android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginBottom="16dp"/>
+        <EditText android:id="@+id/et_url" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Paste URL here (e.g. https://example.com)"
+            android:inputType="textUri" android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary" android:background="@color/surface"
+            android:padding="12dp" android:layout_marginBottom="8dp"/>
+        <Button android:id="@+id/btn_check_url" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="🔍 Check URL Safety"
+            android:backgroundTint="@color/primary" android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp"/>
+        <TextView android:id="@+id/tv_url_status" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Tap to check a URL"
+            android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tv_url_risk" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="—" android:textSize="28sp"
+            android:textStyle="bold" android:textColor="@color/text_primary" android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tv_url_recommendation" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="" android:textSize="14sp"
+            android:textColor="@color/text_primary" android:layout_marginBottom="12dp"/>
+        <LinearLayout android:id="@+id/ll_url_reasons" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical"
+            android:background="@color/surface" android:padding="12dp" android:layout_marginBottom="16dp"/>
+        <LinearLayout android:id="@+id/ll_url_history" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical"/>
+    </LinearLayout>
+</ScrollView>
