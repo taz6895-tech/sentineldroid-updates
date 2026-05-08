@@ -4,8 +4,6 @@ on:
   push:
     branches: [ main ]
     tags:     [ 'v*' ]
-  pull_request:
-    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -23,14 +21,23 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v3
+      - name: Install Gradle 8.10.2
+        run: |
+          set -e
+          wget -q https://services.gradle.org/distributions/gradle-8.10.2-bin.zip -O /tmp/gradle.zip
+          sudo unzip -q /tmp/gradle.zip -d /opt
+          echo "/opt/gradle-8.10.2/bin" >> $GITHUB_PATH
 
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
+      - name: Verify Gradle and Java
+        run: |
+          gradle --version
+          java -version
 
       - name: Build debug APK
-        run: ./gradlew assembleDebug --no-daemon --stacktrace
+        run: gradle assembleDebug --no-daemon --stacktrace --warning-mode=summary
+
+      - name: Show APK location
+        run: ls -la app/build/outputs/apk/debug/
 
       - name: Rename APK
         run: |
